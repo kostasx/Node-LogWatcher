@@ -1,0 +1,38 @@
+{
+	"general" : {},
+	"notice"  : { "Segmentation fault" : {}	},
+	"error" : {
+		"File does not exit" : {},
+		"Fatal error" : {},
+		"PHP Warning" : {
+			"failed to open stream" : {
+				"definition" : "",
+				"stackoverflow" : "",
+				"php" : ""
+			}
+		}
+	},
+	"PHP Notice" : {
+		"Undefined index" :  {
+			"definition" : "Happens when you try to access an array by a key that does not exist in the array.",
+			"stackoverflow" : "http://stackoverflow.com/questions/12769982/reference-what-does-this-error-mean-in-php/12770836#12770836",
+			"php" : "" 
+		},
+		"Undefined variable" : {
+			"definition" : "Happens when you try to use a variable that wasn't previously defined.",
+			"stackoverflow" : "http://stackoverflow.com/questions/12769982/reference-what-does-this-error-mean-in-php/12778634#12778634",
+			"php" : ""
+		},
+		"Use of undefined constant" : {
+			"definition" : "DEFINITION NOT AVAILABLE",
+			"stackoverflow" : "",
+			"php" : ""
+		},
+		"Undefined offset" : {
+			"definition" : "DEFINITION NOT AVAILABLE",
+			"stackoverflow" : "",
+			"php" : ""
+		}
+	},
+	"warning" : {}
+}
