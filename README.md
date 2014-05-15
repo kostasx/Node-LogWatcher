@@ -9,6 +9,6 @@ Usage:
 
 ```bash
 node app.js
-wget http://localhost/server.php
+curl http://localhost/server.php
 ```
 
