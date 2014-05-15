@@ -1,2 +1,3 @@
 * Fill errors.json with all possible messages and responses
 * Port to Node-WebKit
+* Better regexp engine to support various error log structures 
