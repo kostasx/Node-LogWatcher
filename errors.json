@@ -1,7 +1,9 @@
 {
 	"general" : {},
+	"crit" : {},
 	"notice"  : { "Segmentation fault" : {}	},
 	"error" : {
+		"PHP Parse error" : {},
 		"File does not exit" : {},
 		"Fatal error" : {},
 		"PHP Warning" : {

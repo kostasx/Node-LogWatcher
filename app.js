@@ -10,7 +10,8 @@
 	var replies = JSON.parse( fs.readFileSync('./errors.json') );
 
 	var getResponse = function( errorCat, msg, type ){
-		var r = new RegExp( errorCat + ":\\s+(.*)" )
+		var r = new RegExp( errorCat + ":\\s+(.*)" );
+		console.log(msg);
 		output = r.exec(msg)[1];
 
 		for ( var prop in replies[type][errorCat] ){
@@ -35,12 +36,21 @@
 				// CHECK ERROR CATEGORY
 				if ( type === "notice" ){
 
+					errorRes = "notice";
+
 				} else if ( type === "warning" ) {
+
+					errorRes = "warning";
 
 				} else if ( type === "error" ) {
 
-					errorCat = msg.match(/PHP Warning|PHP Notice|PHP Fatal error|File does not exist|PHP Deprecated/);
+					errorCat = msg.match(/PHP Parse error|PHP Warning|PHP Notice|PHP Fatal error|File does not exist|PHP Deprecated/);
 					errorRes = getResponse( errorCat, msg, type );
+
+				} else if ( type === "crit" ) {
+
+					errorRes = "crit";
+
 				}
 
 				// CHOOSE type CONSOLE COLOR FOR ( notice | error | warn )
