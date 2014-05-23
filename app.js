@@ -5,6 +5,7 @@
 	var colors = require("colors");
 	var fs 	   = require("fs");
 	var growl  = true;
+	var log    = "/var/log/apache2/error_log"
 
 	var errorCat = "General";
 	var replies = JSON.parse( fs.readFileSync('./errors.json') );
@@ -23,7 +24,7 @@
 		return output;
 	}
 
-	var tail_child = spawn('tail', ['-f', '/var/log/apache2/error_log']);
+	var tail_child = spawn('tail', [ '-f', log ]);
 		tail_child
 			.stdout.on('data', function(data) {
 
