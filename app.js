@@ -4,7 +4,7 @@
 	var spawn  = require('child_process').spawn;
 	var colors = require("colors");
 	var fs 	   = require("fs");
-
+	var growl  = true;
 
 	var errorCat = "General";
 	var replies = JSON.parse( fs.readFileSync('./errors.json') );
@@ -75,6 +75,8 @@
 				console.log( "Error Category: ".white.bold + String(errorCat).yellow );
 				console.log( "Error Response: ".white.bold + errorRes.bold );
 				console.log( "\r\n" );
+				// GROWLNOTIFY SUPPORT
+				growl && spawn("growlnotify", [ "-t","Error Response", "-m", errorRes ]);
 
 			});
 
