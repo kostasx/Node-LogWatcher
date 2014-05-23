@@ -14,6 +14,6 @@ node app.js
 curl http://localhost/server.php
 ```
 
-# CHANGES
+## CHANGES
 
 Added support for GrowlNotify (Mac)
