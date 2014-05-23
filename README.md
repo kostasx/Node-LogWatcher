@@ -13,7 +13,8 @@ Usage:
 node app.js
 curl http://localhost/server.php
 ```
+______
 
-## CHANGES
+### CHANGES
 
 Added support for GrowlNotify (Mac)
